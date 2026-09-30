@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Mail, Phone, MapPin, Heart, Droplets, Shield, Sparkles, Clock, CalendarDays } from 'lucide-react'; // Using lucide-react for icons
+import './BloodDonate.css';
 
 // A simple reusable Button component
 const Button = ({ children, primary = true, className = '', ...props }) => (
@@ -44,8 +45,8 @@ const eligibilityCriteria = [
 
 const BloodDonate = () => {
     return (
-        <>
-            <div className="max-w-4xl mx-auto text-center mb-12 pt-11">
+        <div className="blood-donate-page">
+            <div className="blood-donate-hero max-w-4xl mx-auto text-center mb-12 pt-11">
                 <div className="inline-block p-4 bg-red-100 rounded-full mb-4">
                     <Heart className="w-12 h-12 text-red-600 fill-red-600" />
                 </div>
@@ -71,10 +72,10 @@ const BloodDonate = () => {
                     </div>
                 </div>
             </div>
-            <div className="min-h-screen bg-gray-50 font-sans">
+            <div className="blood-donate-content min-h-screen bg-gray-50 font-sans">
 
                 {/* --- Eligibility Section --- */}
-                <section id="eligibility" className="py-10 sm:py-24 bg-white">
+                <section id="eligibility" className="blood-donate-eligibility py-10 sm:py-24 bg-white">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <h2 className="text-3xl lg:text-5xl font-medium text-center text-gray-900 mb-4">Are You Eligible to Donate?</h2>
                         <p className="text-center text-lg text-gray-600 max-w-3xl mx-auto mb-12">
@@ -94,15 +95,15 @@ const BloodDonate = () => {
                     </div>
                 </section>
 
-                <section id="register" className="bg-gradient-to-br from-red-50 via-white to-red-50 py-10 relative overflow-hidden">
+                <section id="register" className="blood-donate-register bg-gradient-to-br from-red-50 via-white to-red-50 py-10 relative">
                     {/* Background decorative elements */}
                     <div className="absolute inset-0 bg-gradient-to-r from-red-100/20 to-transparent"></div>
                     <div className="absolute top-10 left-10 w-32 h-32 bg-red-100/30 rounded-full blur-3xl"></div>
                     <div className="absolute bottom-10 right-10 w-40 h-40 bg-red-200/20 rounded-full blur-3xl"></div>
 
-                    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="blood-donate-register-inner max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         {/* Enhanced Header */}
-                        <div className="text-center mb-12">
+                        <div className="blood-donate-form-heading text-center mb-12">
                             <div className="inline-flex items-center justify-center w-16 h-16 bg-red-500 text-white rounded-full mb-6">
                                 <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
                                     <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
@@ -126,7 +127,7 @@ const BloodDonate = () => {
                         <form
                             action="https://formsubmit.co/imamoradabad@gmail.com"
                             method="POST"
-                            className="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-red-100 space-y-8"
+                            className="blood-donate-form bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-2xl shadow-2xl border border-red-100 space-y-8"
                         >
                             {/* FormSubmit Configuration */}
                             <input type="hidden" name="_subject" value="New Blood Donor Registration - IMA Moradabad" />
@@ -410,7 +411,7 @@ const BloodDonate = () => {
                         </form>
 
                         {/* Additional Information */}
-                        <div className="mt-12 text-center">
+                        <div className="blood-donate-steps mt-3 text-center py-12">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
                                 <div className="flex flex-col items-center">
                                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3">
@@ -439,7 +440,7 @@ const BloodDonate = () => {
                 </section>
 
             </div>
-        </>
+        </div>
     );
 };
 

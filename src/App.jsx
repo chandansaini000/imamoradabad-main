@@ -15,6 +15,7 @@ import President_Message from './pages/President_Message';
 import UpComing_Events from './pages/UpComing_Events';
 import Past_Events from './pages/Past_Events';
 import Achievements from './pages/Achievements';
+import MembersDirectory from './pages/MembersDirectory';
 
 
 
@@ -56,6 +57,7 @@ const router = createBrowserRouter([
       { path: 'blooddonate', element: <Blood_Donate /> },
       { path: 'pastevents', element: <Past_Events /> },
       { path: 'achievements', element: <Achievements /> },
+      { path: 'members-directory', element: <MembersDirectory /> },
       { path: 'cme', element: <CME /> },
       { path: 'conference', element: <Conference /> },
       { path: 'thankyou', element: <ThankYou /> },

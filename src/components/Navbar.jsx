@@ -37,7 +37,8 @@ export default function Navbar() {
       dropdownItems: [
         { name: 'About IMA Moradabad', path: '/about' },
         { name: 'Secretary Message', path: '/secretarymessage' },
-        { name: 'President Message', path: '/presidentmessage' }
+        { name: 'President Message', path: '/presidentmessage' },
+        { name: "Member's Directory", path: '/members-directory' }
       ]
     },
     {
