@@ -1,8 +1,8 @@
 
 
 import { useNavigate } from 'react-router-dom';
-
 import { ClipboardPen } from 'lucide-react';
+import AnimatedCounter from './ui/AnimatedCounter';
 
 export default function Welcome() {
 
@@ -66,15 +66,21 @@ export default function Welcome() {
         {/* Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 sm:mt-16">
           <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
-            <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">1500+</div>
+            <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
+              <AnimatedCounter target={1500} suffix="+" duration={2000} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-600 font-medium">Patients Served</div>
           </div>
           <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
-            <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">50+</div>
+            <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
+              <AnimatedCounter target={50} suffix="+" duration={2000} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-600 font-medium">Healthcare Events</div>
           </div>
           <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
-            <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">200+</div>
+            <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">
+              <AnimatedCounter target={200} suffix="+" duration={2000} />
+            </div>
             <div className="text-xs sm:text-sm text-slate-600 font-medium">Medical Professionals</div>
           </div>
         </div>

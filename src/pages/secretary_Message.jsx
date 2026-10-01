@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Banner from '../components/ui/Banner'
+import Banner from '../components/ui/Banner';
+import AnimatedCounter from '../components/ui/AnimatedCounter';
 
 export default function Secretary_Message() {
   const [selectedSection, setSelectedSection] = useState('vision');
@@ -93,15 +94,21 @@ export default function Secretary_Message() {
               {/* Stats */}
               <div className="grid grid-cols-3 gap-3 sm:gap-4 mt-6 sm:mt-8">
                 <div className="bg-white p-3 sm:p-4 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-                  <p className="text-xl sm:text-2xl font-bold text-pink-600">150+</p>
+                  <p className="text-xl sm:text-2xl font-bold text-pink-600">
+                    <AnimatedCounter target={150} suffix="+" duration={2000} />
+                  </p>
                   <p className="text-[11px] sm:text-xs text-gray-600 font-medium">CME Programs</p>
                 </div>
                 <div className="bg-white p-3 sm:p-4 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-                  <p className="text-xl sm:text-2xl font-bold text-blue-600">50+</p>
+                  <p className="text-xl sm:text-2xl font-bold text-blue-600">
+                    <AnimatedCounter target={50} suffix="+" duration={2000} />
+                  </p>
                   <p className="text-[11px] sm:text-xs text-gray-600 font-medium">Health Camps</p>
                 </div>
                 <div className="bg-white p-3 sm:p-4 rounded-xl shadow-sm border border-gray-100 text-center hover:shadow-md transition-shadow">
-                  <p className="text-xl sm:text-2xl font-bold text-green-600">2000+</p>
+                  <p className="text-xl sm:text-2xl font-bold text-green-600">
+                    <AnimatedCounter target={2000} suffix="+" duration={2000} />
+                  </p>
                   <p className="text-[11px] sm:text-xs text-gray-600 font-medium">Active Members</p>
                 </div>
               </div>

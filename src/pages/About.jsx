@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import { Award, Users, BookOpen, Shield, TrendingUp, CheckCircle, ArrowRight, Stethoscope, Heart, Calendar, Video, FileText, Briefcase, Globe } from 'lucide-react';
+import AnimatedCounter from '../components/ui/AnimatedCounter';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState('overview');
 
   const stats = [
-    { number: '5000+', label: 'Active Members', icon: Users },
-    { number: '95+', label: 'Years Legacy', icon: Award },
-    { number: '500+', label: 'Events Annually', icon: Calendar },
-    { number: '1702+', label: 'Active Branches', icon: Globe }
+    { target: 5000, suffix: '+', label: 'Active Members', icon: Users },
+    { target: 95, suffix: '+', label: 'Years Legacy', icon: Award },
+    { target: 500, suffix: '+', label: 'Events Annually', icon: Calendar },
+    { target: 1702, suffix: '+', label: 'Active Branches', icon: Globe }
   ];
 
   const objectives = [
@@ -118,7 +119,9 @@ export default function About() {
                 className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center hover:scale-105 transition-transform border border-emerald-50"
               >
                 <Icon className="w-8 sm:w-10 h-8 sm:h-10 text-emerald-600 mx-auto mb-2 sm:mb-3" />
-                <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">
+                  <AnimatedCounter target={stat.target} suffix={stat.suffix} duration={2000} />
+                </div>
                 <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
               </div>
             );
