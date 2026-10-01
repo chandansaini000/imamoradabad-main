@@ -61,7 +61,7 @@ export default function RequestBlood() {
             </div>
 
             {/* Main Form Card */}
-            <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div data-aos="fade-up" data-aos-duration="800" className="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-red-50">
                 <form
                     action="https://formsubmit.co/imamoradabad@gmail.com"
                     method="POST"

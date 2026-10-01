@@ -65,6 +65,8 @@ export default function Helping_hand() {
                         return (
                             <div 
                                 key={index}
+                                data-aos="zoom-in-up"
+                                data-aos-delay={(index % 3) * 150}
                                 className="bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 border border-emerald-100 hover:border-emerald-300 group hover:-translate-y-2"
                             >
                                 <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg">
@@ -82,7 +84,7 @@ export default function Helping_hand() {
                 </div>
 
                 {/* Taglines Section */}
-                <div className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-10 shadow-2xl">
+                <div data-aos="fade-up" className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-3xl p-10 shadow-2xl">
                     <div className="flex items-center justify-center gap-2 mb-6">
                         <Sparkles className="w-6 h-6 text-yellow-300 fill-yellow-300" />
                         <Sparkles className="w-5 h-5 text-yellow-200 fill-yellow-200" />

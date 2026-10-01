@@ -64,7 +64,9 @@ export default function UpComing_Events() {
                         {events.map((event, index) => (
                             <div
                                 key={index}
-                                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2"
+                                data-aos="fade-up"
+                                data-aos-delay={(index + 1) * 120}
+                                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100"
                             >
                                 {/* Image Section */}
                                 <div className="relative overflow-hidden h-56">

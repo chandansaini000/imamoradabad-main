@@ -99,6 +99,8 @@ export default function Achievements() {
                             return (
                                 <div 
                                     key={index}
+                                    data-aos="fade-up"
+                                    data-aos-delay={(index % 2) * 150}
                                     className={`${achievement.bgColor} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-200 group cursor-pointer`}
                                 >
                                     <div className="flex items-start gap-6">
@@ -145,6 +147,8 @@ export default function Achievements() {
                         {serviceAchievements.map((service, index) => (
                             <div 
                                 key={index}
+                                data-aos="fade-up"
+                                data-aos-delay={(index + 1) * 100}
                                 className="bg-white rounded-xl p-6 hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-emerald-300"
                             >
                                 <h3 className="text-lg font-bold text-gray-900 mb-3">
@@ -182,6 +186,7 @@ export default function Achievements() {
                         {milestones.map((milestone, index) => (
                             <div 
                                 key={index}
+                                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
                                 className={`flex items-center mb-8 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}
                             >
                                 <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>

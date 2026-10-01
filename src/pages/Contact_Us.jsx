@@ -31,7 +31,7 @@ export default function Contact_Us() {
 
           <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 xl:gap-12">
             {/* Left Side - Form */}
-            <div className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg order-2 lg:order-1">
+            <div data-aos="fade-right" data-aos-duration="800" className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 shadow-lg order-2 lg:order-1 border border-slate-100">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium mb-3 sm:mb-4" style={{ color: '#0B0B42' }}>
                 Send us a message
               </h2>
@@ -160,7 +160,7 @@ export default function Contact_Us() {
             </div>
 
             {/* Right Side - Contact Info */}
-            <div className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white order-1 lg:order-2 h-fit lg:sticky lg:top-8" style={{ backgroundColor: '#1A3A52' }}>
+            <div data-aos="fade-left" data-aos-duration="800" className="rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 text-white order-1 lg:order-2 h-fit lg:sticky lg:top-8 shadow-xl" style={{ backgroundColor: '#1A3A52' }}>
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 sm:mb-8 leading-relaxed">
                 Hi! We are always here<br />to help you.
               </h2>

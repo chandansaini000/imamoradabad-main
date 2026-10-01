@@ -50,6 +50,8 @@ export default function ServicesSection() {
                         return (
                             <div 
                                 key={index}
+                                data-aos="fade-up"
+                                data-aos-delay={(index + 1) * 100}
                                 className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-teal-200 group"
                             >
                                 <div className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>

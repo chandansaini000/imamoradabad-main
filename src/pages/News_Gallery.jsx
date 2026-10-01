@@ -132,7 +132,7 @@ const News_Gallery = () => {
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-12 sm:mb-16">
                         {/* Main Featured Article */}
-                        <div className="lg:col-span-2">
+                        <div data-aos="fade-right" data-aos-duration="800" className="lg:col-span-2 rounded-2xl overflow-hidden shadow-lg">
                             <div className="relative h-64 sm:h-80 lg:h-full">
                                 <img
                                     src={featuredArticles[0].image}
@@ -163,9 +163,9 @@ const News_Gallery = () => {
                         </div>
 
                         {/* Side Articles */}
-                        <div className="space-y-4 sm:space-y-6">
+                        <div data-aos="fade-left" data-aos-duration="800" className="space-y-4 sm:space-y-6">
                             {sideArticles.map((article) => (
-                                <div key={article.id} className="relative h-48 sm:h-56 lg:h-64">
+                                <div key={article.id} className="relative h-48 sm:h-56 lg:h-64 rounded-2xl overflow-hidden shadow-md">
                                     <img
                                         src={article.image}
                                         alt={article.title || article.quote}
@@ -218,7 +218,9 @@ const News_Gallery = () => {
                             {recentArticles.map((article, index) => (
                                 <div
                                     key={article.id}
-                                    className={`${index === 0 ? 'sm:col-span-2 sm:row-span-2' : ''}`}
+                                    data-aos="fade-up"
+                                    data-aos-delay={(index % 3) * 120}
+                                    className={`${index === 0 ? 'sm:col-span-2 sm:row-span-2' : ''} rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300`}
                                 >
                                     <div className="relative h-48 sm:h-64 lg:h-full group cursor-pointer">
                                         <img

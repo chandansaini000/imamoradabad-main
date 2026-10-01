@@ -135,7 +135,9 @@ function GalleryCard({ item }) {
 
   return (
     <div
-      className={`relative h-80 rounded-lg overflow-hidden shadow-lg cursor-pointer group ${getGridClass()}`}
+      data-aos="zoom-in"
+      data-aos-duration="600"
+      className={`relative h-80 rounded-2xl overflow-hidden shadow-lg cursor-pointer group ${getGridClass()}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

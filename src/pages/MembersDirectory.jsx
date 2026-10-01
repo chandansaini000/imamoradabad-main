@@ -91,7 +91,7 @@ export default function MembersDirectory() {
           <p className="members-directory__empty">No members match your search. Try another name or membership number.</p>
         ) : (
           <>
-            <div className="members-directory__table-wrap">
+            <div data-aos="fade-up" data-aos-duration="700" className="members-directory__table-wrap">
               <div className="members-directory__desktop-columns">
                 <table className="members-directory__table members-directory__paired-table">
                   <caption className="sr-only">IMA Member&apos;s Directory 2024</caption>

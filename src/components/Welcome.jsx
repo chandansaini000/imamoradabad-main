@@ -25,12 +25,12 @@ export default function Welcome() {
         {/* Content Section */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center bg-white rounded-2xl sm:rounded-3xl shadow-xl overflow-hidden border border-slate-100">
           {/* Left Side - Image */}
-          <div className="relative max-h-96 md:max-h-none overflow-hidden h-full">
-            <img src="/welcome-ima.jpg" alt="IMA Moradabad Bhawan" className="w-full h-full object-cover" />
+          <div data-aos="fade-right" data-aos-duration="900" className="relative max-h-96 md:max-h-none overflow-hidden h-full">
+            <img src="/welcome-ima.jpg" alt="IMA Moradabad Bhawan" className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" />
           </div>
 
           {/* Right Side - Content */}
-          <div className="p-6 sm:p-8 md:p-10 lg:p-12">
+          <div data-aos="fade-left" data-aos-duration="900" className="p-6 sm:p-8 md:p-10 lg:p-12">
             <div className="inline-flex items-center space-x-2 bg-emerald-100/80 text-emerald-800 px-3.5 py-1.5 rounded-full mb-4 text-xs sm:text-sm">
               <ClipboardPen className="w-4 h-4" />
               <span className="font-semibold">Our Story</span>
@@ -65,15 +65,15 @@ export default function Welcome() {
 
         {/* Stats Section */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-10 sm:mt-16">
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
+          <div data-aos="fade-up" data-aos-delay="100" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
             <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">1500+</div>
             <div className="text-xs sm:text-sm text-slate-600 font-medium">Patients Served</div>
           </div>
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
+          <div data-aos="fade-up" data-aos-delay="200" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
             <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">50+</div>
             <div className="text-xs sm:text-sm text-slate-600 font-medium">Healthcare Events</div>
           </div>
-          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
+          <div data-aos="fade-up" data-aos-delay="300" className="bg-white p-6 sm:p-8 rounded-2xl shadow-sm border border-slate-100 text-center hover:shadow-md transition-all">
             <div className="text-3xl sm:text-4xl font-bold text-blue-600 mb-1 sm:mb-2">200+</div>
             <div className="text-xs sm:text-sm text-slate-600 font-medium">Medical Professionals</div>
           </div>

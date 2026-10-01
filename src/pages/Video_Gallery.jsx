@@ -65,10 +65,12 @@ const Video_Gallery = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-            {videos.map((video) => (
+            {videos.map((video, index) => (
               <div
                 key={video.id}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300"
+                data-aos="fade-up"
+                data-aos-delay={(index % 4) * 100}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-slate-100"
               >
                 {/* YouTube Shorts iframe - Vertical format */}
                 <div className="relative overflow-hidden bg-slate-900" style={{ aspectRatio: '9/16' }}>

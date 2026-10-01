@@ -63,17 +63,19 @@ export default function Events() {
                         return (
                             <div 
                                 key={index}
-                                className={`${event.bgColor} rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-200 group cursor-pointer`}
+                                data-aos="fade-up"
+                                data-aos-delay={(index + 1) * 120}
+                                className={`${event.bgColor} rounded-2xl p-6 sm:p-8 hover:shadow-xl transition-all duration-300 border-2 border-transparent hover:border-teal-200 group cursor-pointer`}
                             >
                                 <div className="flex items-start gap-4">
-                                    <div className={`flex-shrink-0 w-16 h-16 bg-gradient-to-br ${event.color} rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md`}>
-                                        <Icon className="w-8 h-8 text-white" strokeWidth={2} />
+                                    <div className={`flex-shrink-0 w-14 sm:w-16 h-14 sm:h-16 bg-gradient-to-br ${event.color} rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-md`}>
+                                        <Icon className="w-7 sm:w-8 h-7 sm:h-8 text-white" strokeWidth={2} />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors">
                                             {event.title}
                                         </h3>
-                                        <p className="text-gray-700 leading-relaxed">
+                                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                                             {event.description}
                                         </p>
                                     </div>

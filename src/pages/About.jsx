@@ -107,14 +107,19 @@ export default function About() {
 
       {/* Stats Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-16 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
-              <div key={index} className="bg-white rounded-2xl shadow-xl p-6 text-center hover:scale-105 transition-transform">
-                <Icon className="w-10 h-10 text-emerald-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
-                <div className="text-gray-600 text-sm">{stat.label}</div>
+              <div 
+                key={index} 
+                data-aos="fade-up"
+                data-aos-delay={(index + 1) * 100}
+                className="bg-white rounded-2xl shadow-xl p-4 sm:p-6 text-center hover:scale-105 transition-transform border border-emerald-50"
+              >
+                <Icon className="w-8 sm:w-10 h-8 sm:h-10 text-emerald-600 mx-auto mb-2 sm:mb-3" />
+                <div className="text-2xl sm:text-3xl font-bold text-gray-900 mb-1">{stat.number}</div>
+                <div className="text-gray-600 text-xs sm:text-sm font-medium">{stat.label}</div>
               </div>
             );
           })}
@@ -122,38 +127,38 @@ export default function About() {
       </div>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-20">
         {/* Overview Tab */}
         {activeTab === 'overview' && (
-          <div className="space-y-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+          <div className="space-y-12">
             {/* History Section */}
-            <div className="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+            <div data-aos="fade-up" className="bg-white rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 border border-slate-100">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center">
                   <BookOpen className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">Our Legacy</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">Our Legacy</h2>
               </div>
               <div className="prose prose-lg max-w-none">
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                   Indian Medical Association (IMA) is the largest represented organization of doctors practicing modern system of medicine in India. The IMA Moradabad Branch has been serving the medical community in Moradabad, Uttar Pradesh - 244001 for decades, fostering excellence in healthcare.
                 </p>
-                <p className="text-gray-600 leading-relaxed mb-6">
+                <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
                   In 1928, the name Indian Medical Association was coined and since then, IMA has traversed a long path, contributing substantially to the medical profession. In 1956, IMA played a crucial role in organizing the World Body of Medical Associations across the globe.
                 </p>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
                   Today, IMA has grown to become the voice of the medical profession with over <span className="font-semibold text-emerald-600">300,000+ members</span> spread across <span className="font-semibold text-emerald-600">28 states and Union territories</span>, with more than <span className="font-semibold text-emerald-600">1,702 active local branches</span> including our Moradabad chapter.
                 </p>
               </div>
             </div>
 
             {/* Vision Section */}
-            <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl shadow-xl p-8 md:p-12 text-white">
-              <div className="flex items-center space-x-3 mb-6">
-                <Heart className="w-12 h-12" />
-                <h2 className="text-3xl font-bold">Our Vision</h2>
+            <div data-aos="fade-up" data-aos-delay="150" className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl shadow-xl p-6 sm:p-8 md:p-12 text-white">
+              <div className="flex items-center space-x-3 mb-4 sm:mb-6">
+                <Heart className="w-10 sm:w-12 h-10 sm:h-12" />
+                <h2 className="text-2xl sm:text-3xl font-bold">Our Vision</h2>
               </div>
-              <p className="text-lg text-emerald-100 leading-relaxed">
+              <p className="text-sm sm:text-lg text-emerald-100 leading-relaxed">
                 IMA Moradabad is a democratic forum working to maintain dignity, honor and social security of the medical fraternity in our region. We strive to provide quality healthcare to each and every citizen of Moradabad and surrounding areas. We are committed to preserving the autonomy of the medical profession while ensuring the highest standards of care.
               </p>
             </div>

@@ -203,8 +203,13 @@ export default function BloodCamps() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                    {filteredCamps.map((camp) => (
-                        <div key={camp.id} className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden group">
+                    {filteredCamps.map((camp, index) => (
+                        <div 
+                            key={camp.id} 
+                            data-aos="fade-up"
+                            data-aos-delay={(index % 2) * 150}
+                            className="bg-white rounded-xl shadow-md hover:shadow-xl transition overflow-hidden group border border-slate-100"
+                        >
                             <div className="bg-gradient-to-r from-red-500 to-red-600 p-4">
                                 <div className="flex items-start justify-between">
                                     <div>

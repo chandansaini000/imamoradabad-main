@@ -49,6 +49,8 @@ export default function Past_Events() {
                     {events.map((event, index) => (
                         <div
                             key={index}
+                            data-aos="fade-up"
+                            data-aos-delay={(index + 1) * 100}
                             className="mb-6 md:mb-8 last:mb-0 group cursor-pointer"
                         >
                             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pb-6 md:pb-8 border-b border-gray-300 transition-all duration-300 hover:border-gray-400">

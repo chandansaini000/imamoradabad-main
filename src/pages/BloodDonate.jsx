@@ -83,7 +83,12 @@ const BloodDonate = () => {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {eligibilityCriteria.map((item, index) => (
-                                <div key={index} className="bg-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-[1.02] duration-300">
+                                <div 
+                                    key={index} 
+                                    data-aos="fade-up"
+                                    data-aos-delay={(index + 1) * 100}
+                                    className="bg-red-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition transform hover:scale-[1.02] duration-300"
+                                >
                                     <div className="flex items-center justify-center w-12 h-12 bg-white rounded-full mb-4 shadow-md">
                                         {item.icon}
                                     </div>
@@ -413,26 +418,35 @@ const BloodDonate = () => {
                         {/* Additional Information */}
                         <div className="blood-donate-steps mt-3 text-center py-12">
                             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3">
+                                <div data-aos="fade-up" data-aos-delay="100" className="flex flex-col items-center px-2">
+                                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3 shadow-sm">
                                         <span className="text-red-600 font-bold text-lg">1</span>
                                     </div>
                                     <h4 className="font-semibold text-gray-900 mb-1">Quick Registration</h4>
-                                    <p className="text-sm text-gray-600">Fill out this 2-minute form</p>
+                                    <p className="text-sm font-medium text-red-600 mb-1">Fill out this 2-minute form</p>
+                                    <p className="text-xs text-gray-500 leading-relaxed">
+                                        Enter your contact & medical details to join the donor network.
+                                    </p>
                                 </div>
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3">
+                                <div data-aos="fade-up" data-aos-delay="200" className="flex flex-col items-center px-2">
+                                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3 shadow-sm">
                                         <span className="text-red-600 font-bold text-lg">2</span>
                                     </div>
                                     <h4 className="font-semibold text-gray-900 mb-1">IMA Will Contact You</h4>
-                                    <p className="text-sm text-gray-600">Within 24 hours to schedule</p>
+                                    <p className="text-sm font-medium text-red-600 mb-1">Within 24 hours to schedule</p>
+                                    <p className="text-xs text-gray-500 leading-relaxed">
+                                        Our medical team confirms your availability and appointment.
+                                    </p>
                                 </div>
-                                <div className="flex flex-col items-center">
-                                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3">
+                                <div data-aos="fade-up" data-aos-delay="300" className="flex flex-col items-center px-2">
+                                    <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-3 shadow-sm">
                                         <span className="text-red-600 font-bold text-lg">3</span>
                                     </div>
                                     <h4 className="font-semibold text-gray-900 mb-1">Save Lives</h4>
-                                    <p className="text-sm text-gray-600">Help patients in Moradabad</p>
+                                    <p className="text-sm font-medium text-red-600 mb-1">Help patients in Moradabad</p>
+                                    <p className="text-xs text-gray-500 leading-relaxed">
+                                        Your single blood donation can save up to 3 emergency patients.
+                                    </p>
                                 </div>
                             </div>
                         </div>

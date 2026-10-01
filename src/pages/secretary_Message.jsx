@@ -31,7 +31,7 @@ export default function Secretary_Message() {
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start">
             {/* Image Section */}
-            <div className="w-full lg:flex-1 lg:max-w-sm">
+            <div data-aos="fade-right" data-aos-duration="800" className="w-full lg:flex-1 lg:max-w-sm">
               <div
                 className={`w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 border-8 rounded-full overflow-hidden shadow-2xl cursor-pointer mx-auto transition-all duration-300 ${imageHover ? 'border-pink-600 scale-105' : 'border-purple-300'
                   }`}
@@ -59,7 +59,7 @@ export default function Secretary_Message() {
             </div>
 
             {/* Content Section */}
-            <div className="w-full lg:flex-1">
+            <div data-aos="fade-left" data-aos-duration="800" className="w-full lg:flex-1">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 text-center lg:text-left uppercase">
                 Secretary's <span className="text-pink-600">MESSAGE</span>
               </h2>
