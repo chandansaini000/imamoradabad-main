@@ -104,7 +104,7 @@ export default function HeroSlider() {
   };
 
   return (
-    <div className="relative h-[700px] overflow-hidden bg-gray-900">
+    <div className="relative min-h-[580px] md:h-[700px] overflow-hidden bg-gray-900">
       {/* Slides */}
       {slides.map((slide, index) => {
         const Icon = slide.icon;
@@ -130,57 +130,57 @@ export default function HeroSlider() {
             </div>
 
             {/* Content Container - Two Column Layout */}
-            <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid lg:grid-cols-2 gap-8 items-center h-full">
+            <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-0 flex items-center">
+              <div className="grid lg:grid-cols-2 gap-8 items-center w-full">
 
                 {/* Left Side - Text Content */}
-                <div className="flex flex-col justify-center text-center lg:text-left">
+                <div className="flex flex-col justify-center text-center lg:text-left pt-4 pb-14 md:py-0">
                   {/* Subtitle Badge */}
-                  <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 w-fit mx-auto lg:mx-0 animate-in fade-in zoom-in duration-700">
-                    <Icon className="w-5 h-5 text-white" />
-                    <span className="text-white font-semibold">{slide.subtitle}</span>
+                  <div className="inline-flex items-center space-x-2 bg-white/20 backdrop-blur-sm px-3.5 py-1.5 rounded-full mb-4 md:mb-6 w-fit mx-auto lg:mx-0 animate-in fade-in zoom-in duration-700">
+                    <Icon className="w-4 h-4 text-white" />
+                    <span className="text-white text-xs sm:text-sm font-semibold">{slide.subtitle}</span>
                   </div>
 
                   {/* Title */}
-                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 sm:mb-6 leading-tight animate-in fade-in slide-in-from-bottom-8 duration-700 delay-100">
                     {slide.title}
                   </h1>
 
                   {/* Description */}
-                  <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/90 mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-200">
                     {slide.description}
                   </p>
 
                   {/* CTAs */}
-                  <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+                  <div className="flex flex-wrap gap-3 sm:gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
                     <button
                       onClick={() => handlePrimaryCta(slide.ctaLink)}
-                      className="group bg-white text-gray-900 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center space-x-2 cursor-pointer"
+                      className="group bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center space-x-2 text-sm sm:text-base active:scale-95"
                     >
                       <span>{slide.cta}</span>
-                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                      <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                     <button
                       onClick={() => handleSecondaryCta(slide.ctaSecondaryLink)}
-                      className="bg-white/20 backdrop-blur-sm text-white border-2 border-white px-8 py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 cursor-pointer"
+                      className="bg-white/20 backdrop-blur-sm text-white border-2 border-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold hover:bg-white/30 transition-all duration-300 text-sm sm:text-base active:scale-95"
                     >
                       {slide.ctaSecondary}
                     </button>
                   </div>
 
                   {/* Stats */}
-                  <div className="flex flex-wrap gap-8 justify-center lg:justify-start mt-12 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
-                    <div className="text-white">
-                      <div className="text-4xl font-bold">5000+</div>
-                      <div className="text-white/80 text-sm">Members</div>
+                  <div className="flex flex-wrap gap-5 sm:gap-8 justify-center lg:justify-start mt-8 md:mt-12 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500">
+                    <div className="text-white text-center lg:text-left">
+                      <div className="text-2xl sm:text-3xl md:text-4xl font-bold">5000+</div>
+                      <div className="text-white/80 text-xs sm:text-sm">Members</div>
                     </div>
-                    <div className="text-white">
-                      <div className="text-4xl font-bold">95+</div>
-                      <div className="text-white/80 text-sm">Years Legacy</div>
+                    <div className="text-white text-center lg:text-left">
+                      <div className="text-2xl sm:text-3xl md:text-4xl font-bold">95+</div>
+                      <div className="text-white/80 text-xs sm:text-sm">Years Legacy</div>
                     </div>
-                    <div className="text-white">
-                      <div className="text-4xl font-bold">500+</div>
-                      <div className="text-white/80 text-sm">Events/Year</div>
+                    <div className="text-white text-center lg:text-left">
+                      <div className="text-2xl sm:text-3xl md:text-4xl font-bold">500+</div>
+                      <div className="text-white/80 text-xs sm:text-sm">Events/Year</div>
                     </div>
                   </div>
                 </div>

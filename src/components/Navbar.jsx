@@ -152,53 +152,59 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 rounded-lg text-black hover:bg-gray-800 transition-colors"
+            aria-label="Toggle navigation menu"
+            className="lg:hidden p-2.5 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-gray-100 transition-all duration-200 active:scale-95"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Dropdown */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white shadow-lg border-t border-gray-200">
-          <div className="max-h-96 overflow-y-auto">
+        <div className="lg:hidden bg-white/95 backdrop-blur-md shadow-2xl border-t border-gray-100 animate-in fade-in slide-in-from-top-2 duration-200">
+          <div className="max-h-[calc(100vh-5.5rem)] overflow-y-auto px-4 py-3 divide-y divide-gray-100">
             {navItems.map((item) => (
-              <div key={item.name} className="border-b border-gray-200">
+              <div key={item.name} className="py-1">
                 {item.hasDropdown ? (
                   <button
                     onClick={() => toggleDropdown(item.name)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-3 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50/70 transition-all duration-200 font-medium"
                   >
-                    <div className="flex items-center space-x-2">
-                      <item.icon className="w-5 h-5 text-black" />
-                      <span className="font-medium">{item.name}</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-700">
+                        <item.icon className="w-4 h-4" />
+                      </div>
+                      <span className="font-semibold text-sm">{item.name}</span>
                     </div>
                     <ChevronDown
-                      className={`w-5 h-5 transition-transform ${activeDropdown === item.name ? 'rotate-180' : ''}`}
+                      className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${activeDropdown === item.name ? 'rotate-180 text-blue-600' : ''}`}
                     />
                   </button>
                 ) : (
                   <button
                     onClick={() => handleNavigation(item.path)}
-                    className="w-full flex items-center justify-between px-4 py-3 text-gray-800 hover:bg-gray-100 transition-colors"
+                    className="w-full flex items-center justify-between px-3 py-3 rounded-xl text-gray-800 hover:text-blue-600 hover:bg-blue-50/70 transition-all duration-200 font-medium"
                   >
-                    <div className="flex items-center space-x-2">
-                      <item.icon className="w-5 h-5 text-black" />
-                      <span className="font-medium">{item.name}</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-700">
+                        <item.icon className="w-4 h-4" />
+                      </div>
+                      <span className="font-semibold text-sm">{item.name}</span>
                     </div>
                   </button>
                 )}
 
                 {/* Mobile Dropdown items */}
                 {item.hasDropdown && activeDropdown === item.name && (
-                  <div className="bg-gray-50 py-2">
+                  <div className="bg-slate-50/80 rounded-xl my-1.5 p-1.5 space-y-1 border border-slate-200/60">
                     {item.dropdownItems.map((subItem, idx) => (
                       <button
                         key={idx}
                         onClick={() => handleNavigation(subItem.path)}
-                        className="block w-full text-left px-8 py-2 text-sm text-gray-700 hover:text-black hover:bg-gray-100 transition-colors"
+                        className="w-full text-left px-4 py-2.5 rounded-lg text-xs sm:text-sm font-medium text-gray-700 hover:text-blue-700 hover:bg-white transition-all flex items-center gap-2"
                       >
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
                         {subItem.name}
                       </button>
                     ))}
@@ -206,11 +212,12 @@ export default function Navbar() {
                 )}
               </div>
             ))}
-            <div className="p-4">
+            <div className="pt-4 pb-2">
               <button
                 onClick={() => handleNavigation('/blooddonate')}
-                className="w-full py-3 rounded-lg bg-red-500 hover:bg-red-600 font-semibold text-white transition-colors cursor-pointer"
+                className="w-full py-3.5 rounded-xl bg-gradient-to-r from-red-500 to-rose-600 hover:from-red-600 hover:to-rose-700 font-semibold text-white shadow-md shadow-red-200 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
               >
+                <Heart className="w-5 h-5 fill-white" />
                 Donate Blood
               </button>
             </div>

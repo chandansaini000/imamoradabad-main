@@ -10,22 +10,22 @@ export default function CTA() {
 
     }
     return (
-        <div className="bg-gray-100 flex items-center justify-center p-5 py-12">
-            <div className="w-full lg:max-w-4xl max-w-2xl bg-gradient-to-br from-red-300 via-pink-400 to-purple-500 rounded-3xl p-12 shadow-2xl flex items-center justify-between gap-8 hover:shadow-3xl hover:-translate-y-1 transition-all duration-300 md:flex-row flex-col text-center md:text-left">
+        <div className="bg-gray-100 flex items-center justify-center p-4 sm:p-6 py-10 sm:py-14">
+            <div className="w-full lg:max-w-4xl max-w-2xl bg-gradient-to-br from-red-400 via-pink-500 to-purple-600 rounded-2xl sm:rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl flex items-center justify-between gap-6 md:gap-8 hover:shadow-2xl transition-all duration-300 md:flex-row flex-col text-center md:text-left">
                 <div className="flex-1">
-                    <h2 className="text-4xl font-semibold text-white mb-3 tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-3 tracking-tight">
                         Ready to get started?
                     </h2>
-                    <p className="text-white text-opacity-90 text-base italic font-light">
-                        Create an account or contact our team
+                    <p className="text-white/90 text-sm sm:text-base font-normal">
+                        Join IMA Moradabad or contact our dedicated administrative team.
                     </p>
                 </div>
-                <a
-                    href="#contact" onClick={handleNavigation}
-                    className="bg-white text-purple-600 px-8 py-3.5 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:bg-gray-50 transition-all duration-300 active:translate-y-0 whitespace-nowrap"
+                <button
+                    onClick={handleNavigation}
+                    className="w-full sm:w-auto bg-white text-purple-700 px-7 sm:px-8 py-3.5 rounded-xl font-bold text-sm sm:text-base shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:bg-gray-50 active:scale-95 transition-all duration-200 whitespace-nowrap cursor-pointer"
                 >
                     Contact Us
-                </a>
+                </button>
             </div>
         </div>
     );
