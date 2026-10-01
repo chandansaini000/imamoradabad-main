@@ -33,14 +33,15 @@ export default function President_Message() {
             {/* Image Section */}
             <div className="flex-1 min-w-[300px]">
               <div
-                className={`border-8 rounded-xl overflow-hidden shadow-xl cursor-pointer ${imageHover ? 'border-pink-600' : 'border-purple-300'}`}
+                className={`w-100 h-100 border-8 rounded-full overflow-hidden shadow-xl cursor-pointer mx-auto ${imageHover ? 'border-pink-600' : 'border-purple-300'
+                  }`}
                 onMouseEnter={() => setImageHover(true)}
                 onMouseLeave={() => setImageHover(false)}
               >
                 <img
-                  src="/president-of-ima.jpg"
+                  src="file_0000000014848208836ddf30894e8069 (1).png"
                   alt="President of IMA Moradabad"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -107,7 +108,7 @@ export default function President_Message() {
 
               <div className="mt-12 bg-gray-100 p-6 rounded-lg">
                 <p className="font-semibold text-gray-800">With warm regards,</p>
-                <p className="text-gray-700 mt-1">Dr. Vibhor Jain</p>
+                <p className="text-gray-700 mt-1">Dr. Anat Rana</p>
                 <p className="text-gray-600 text-sm">President, Indian Medical Association</p>
                 <p className="text-gray-600 text-sm">Moradabad Branch, Uttar Pradesh - 244001</p>
               </div>

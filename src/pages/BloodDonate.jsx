@@ -438,9 +438,9 @@ const BloodDonate = () => {
                         </div>
                     </div>
                 </section>
-
             </div>
         </div>
+
     );
 };
 

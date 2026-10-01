@@ -33,14 +33,15 @@ export default function Secretary_Message() {
             {/* Image Section */}
             <div className="flex-1 min-w-[300px]">
               <div
-                className={`border-8 rounded-xl overflow-hidden shadow-xl cursor-pointer ${imageHover ? 'border-pink-600' : 'border-purple-300'}`}
+                className={`w-100 h-100 border-8 rounded-full overflow-hidden shadow-xl cursor-pointer mx-auto ${imageHover ? 'border-pink-600' : 'border-purple-300'
+                  }`}
                 onMouseEnter={() => setImageHover(true)}
                 onMouseLeave={() => setImageHover(false)}
               >
                 <img
-                  src="/secretary-of-ima.jpg"
+                  src="Pi7_dr-dishantar-goel-moradabad-ho-moradabad-psychiatrists-8ivtob85g6.jpeg"
                   alt="Secretary of IMA Moradabad"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover"
                 />
               </div>
 
@@ -70,8 +71,8 @@ export default function Secretary_Message() {
                     key={key}
                     onClick={() => setSelectedSection(key)}
                     className={`px-5 py-2 rounded-lg font-medium cursor-pointer ${selectedSection === key
-                        ? 'bg-pink-600 text-white shadow-lg'
-                        : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
+                      ? 'bg-pink-600 text-white shadow-lg'
+                      : 'bg-white text-gray-700 hover:bg-gray-100 shadow'
                       }`}
                   >
                     {sections[key].title}
@@ -107,8 +108,7 @@ export default function Secretary_Message() {
 
               <div className="mt-12 bg-gray-100 p-6 rounded-lg">
                 <p className="font-semibold text-gray-800">Warm Regards,</p>
-                <p className="text-gray-700 mt-1">Dr. Girjesh Kain</p>
-                <p className="text-gray-600 text-sm">Honorary Secretary</p>
+                <p className="text-gray-700 mt-1">Dr. Dishantar Goel</p>
                 <p className="text-gray-600 text-sm">Indian Medical Association, Moradabad</p>
                 <p className="text-gray-600 text-sm">Uttar Pradesh - 244001</p>
               </div>

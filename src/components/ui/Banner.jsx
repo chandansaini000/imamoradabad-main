@@ -1,10 +1,10 @@
-import {  Trophy } from 'lucide-react';
+import { Trophy } from 'lucide-react';
 
 export default function Banner(props) {
     return (
 
 
-        <section className="py-20 px-6 bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
+        <section className="py-10 px-6 bg-gradient-to-r from-teal-600 to-emerald-600 text-white">
             <div className="max-w-6xl mx-auto text-center">
                 <div className="inline-block mb-6">
                     <div className="flex items-center gap-3 bg-white/20 backdrop-blur-sm rounded-full px-6 py-3">
